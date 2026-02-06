@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Times New Roman", serif;
+    background: url("bg.jpg") no-repeat center center / cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #222;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #1b5e20, #2e7d32);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    z-index: 1000;
+}
+
+.moving-text {
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+    color: #ff1744;
+    animation: move 4s linear infinite alternate;
+}
+
+@keyframes move {
+    from { transform: translateX(-20%); }
+    to { transform: translateX(20%); }
+}
+
+.nav-links a {
+    margin-left: 14px;
+    text-decoration: none;
+    color: #ffeb3b;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding-top: 120px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 38px;
+    color: #1b5e20;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+/* ===== CARDS ===== */
+.cards {
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    width: 90%;
+    perspective: 1000px;
+}
+
+.card {
+    background: linear-gradient(145deg, #fdd835, #fbc02d);
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    transform-style: preserve-3d;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: rotateY(12deg) rotateX(6deg) scale(1.05);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.7);
+}
+
+.card h2 {
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 14px;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
