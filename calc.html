@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | Ayush Saxena</title>
+
+    <link rel="stylesheet" href="calc.css">
+    <link rel="stylesheet" href="theme.css">
+    <meta name="description" content="Free online calculator with scientific functions, history saving, and modern UI. Created by Ayush Saxena.">
+    <meta name="keywords" content="calculator, scientific calculator, online calculator, math tool, Ayush Saxena">
+    <meta name="author" content="Ayush Saxena">
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="moving-text">MADE BY AYUSH SAXENA</div>
+
+        <nav class="nav-links">
+            <a href="scicalc.html">Scientific Calc</a>
+            <a href="Theme.html" onclick="toggleTheme()">Theme</a>
+            <a href="history.html">History</a>
+            <a href="developer.html">Developer</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <section class="heading">
+            <h1>Welcome to My Calculator</h1>
+            <p>HTML • CSS • JavaScript</p>
+        </section>
+        <section class="container">
+            <div class="calculator">
+
+                <input type="text" id="display" disabled>
+
+                <div class="buttons">
+                    <button class="operator" onclick="clearDisplay()">C</button>
+                    <button class="operator" onclick="deleteLast()">⌫</button>
+                    <button class="operator" onclick="appendValue('%')">%</button>
+                    <button class="operator" onclick="appendValue('/')">/</button>
+
+                    <button onclick="appendValue('7')">7</button>
+                    <button onclick="appendValue('8')">8</button>
+                    <button onclick="appendValue('9')">9</button>
+                    <button class="operator" onclick="appendValue('*')">*</button>
+
+                    <button onclick="appendValue('4')">4</button>
+                    <button onclick="appendValue('5')">5</button>
+                    <button onclick="appendValue('6')">6</button>
+                    <button class="operator" onclick="appendValue('-')">-</button>
+
+                    <button onclick="appendValue('1')">1</button>
+                    <button onclick="appendValue('2')">2</button>
+                    <button onclick="appendValue('3')">3</button>
+                    <button class="operator" onclick="appendValue('+')">+</button>
+
+                    <button class="zero" onclick="appendValue('0')">0</button>
+                    <button onclick="appendValue('.')">.</button>
+                    <button class="equal" onclick="calculate()">=</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="last">
+            © 2024 Ayush Saxena. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="calc.js"></script>
+    <script src="Theme.js"></script>
+
+</body>
+
+</html>

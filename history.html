@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculation History | Ayush Saxena</title>
+
+    <link rel="stylesheet" href="calc.css">
+    <link rel="stylesheet" href="theme.css">
+    <meta name="description" content="Advanced Scientific Calculator by Ayush Saxena. Engineering calculator with history, themes, scientific and trigonometric functions.">
+    <meta name="keywords" content="Scientific Calculator, Online Calculator, Engineering Calculator, Trigonometry Calculator">
+    <meta name="author" content="Ayush Saxena">
+    <meta name="robots" content="index, follow">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <div class="moving-text">CALCULATION HISTORY</div>
+
+        <nav class="nav-links">
+            <a href="calc.html">Home</a>
+            <a href="scicalc.html">Scientific Calc</a>
+            <a href="Theme.html">Theme</a>
+            <a href="developer.html">Developer</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <section class="heading">
+            <h1>History</h1>
+            <p>Basic + Scientific Records</p>
+        </section>
+
+        <section class="container">
+            <div class="calculator" id="historyBox">
+                <button class="operator" onclick="clearHistory()">Clear History</button>
+                <div id="historyList"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="last">© 2024 Ayush Saxena. All rights reserved.</div>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script src="history.js"></script>
+</body>
+
+</html>

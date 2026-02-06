@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Scientific Calculator</title>
+<link rel="stylesheet" href="scicalc.css">
+</head>
+<body class="theme-light">
+
+<div class="calculator">
+
+    <!-- DISPLAY -->
+    <input type="text" id="display" value="0" readonly>
+
+    <!-- BUTTON GRID -->
+    <div class="buttons">
+
+        <!-- TOP CONTROLS -->
+        <button class="btn op" onclick="clearDisplay()">C</button>
+        <button class="btn op" onclick="deleteLast()">⌫</button>
+        <button class="btn op" onclick="appendValue('(')">(</button>
+        <button class="btn op" onclick="appendValue(')')">)</button>
+
+        <!-- TRIG -->
+        <button class="btn sci" onclick="appendFunc('sin(')">sin</button>
+        <button class="btn sci" onclick="appendFunc('cos(')">cos</button>
+        <button class="btn sci" onclick="appendFunc('tan(')">tan</button>
+        <button class="btn op" onclick="appendValue('/')">÷</button>
+
+        <!-- INVERSE TRIG -->
+        <button class="btn sci" onclick="appendFunc('asin(')">sin⁻¹</button>
+        <button class="btn sci" onclick="appendFunc('acos(')">cos⁻¹</button>
+        <button class="btn sci" onclick="appendFunc('atan(')">tan⁻¹</button>
+        <button class="btn op" onclick="appendValue('*')">×</button>
+
+        <!-- LOGS & POWER -->
+        <button class="btn sci" onclick="appendFunc('log(')">log</button>
+        <button class="btn sci" onclick="appendFunc('ln(')">ln</button>
+        <button class="btn sci" onclick="appendValue('**')">xʸ</button>
+        <button class="btn op" onclick="appendValue('-')">−</button>
+
+        <!-- ROOTS -->
+        <button class="btn sci" onclick="appendFunc('sqrt(')">√</button>
+        <button class="btn sci" onclick="appendFunc('cbrt(')">∛</button>
+        <button class="btn sci" onclick="appendValue('**2')">x²</button>
+        <button class="btn op" onclick="appendValue('+')">+</button>
+
+        <!-- NUMBERS -->
+        <button class="btn num" onclick="appendValue('7')">7</button>
+        <button class="btn num" onclick="appendValue('8')">8</button>
+        <button class="btn num" onclick="appendValue('9')">9</button>
+        <button class="btn equal" onclick="calculate()">=</button>
+
+        <button class="btn num" onclick="appendValue('4')">4</button>
+        <button class="btn num" onclick="appendValue('5')">5</button>
+        <button class="btn num" onclick="appendValue('6')">6</button>
+        <button class="btn sci" onclick="appendFunc('fact(')">n!</button>
+
+        <button class="btn num" onclick="appendValue('1')">1</button>
+        <button class="btn num" onclick="appendValue('2')">2</button>
+        <button class="btn num" onclick="appendValue('3')">3</button>
+        <button class="btn sci" onclick="appendValue('%')">%</button>
+
+        <!-- BOTTOM -->
+        <button class="btn num zero" onclick="appendValue('0')">0</button>
+        <button class="btn num" onclick="appendValue('.')">.</button>
+        <button class="btn sci" onclick="appendValue('Math.PI')">π</button>
+        <button class="btn sci" onclick="appendValue('Math.E')">e</button>
+
+    </div>
+</div>
+
+<script src="calc.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url("bg.jpg") no-repeat center center / cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #222;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #1b5e20, #2e7d32);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.moving-text {
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+    color: #ff1744;
+    font-size: 18px;
+    white-space: nowrap;
+    animation: moveText 4s linear infinite alternate;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+@keyframes moveText {
+    from {
+        transform: translateX(-30%);
+    }
+
+    to {
+        transform: translateX(30%);
+    }
+}
+
+.nav-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #ffeb3b;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: white;
+    text-decoration: underline;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.last {
+    animation: moveText 4s linear infinite alternate;
+}
+
+.developer {
+    text-align: center;
+    margin: 10px;
+    font-size: large;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.heading {
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+    color: #1b5e20;
+    text-shadow: 0 0 8px rgba(27, 94, 32, 0.7);
+    top: 100px;
+}
+
+.contact-section {
+    text-align: center;
+    margin: 40px auto 80px;
+    padding: 20px;
+}
+
+.contact-section h2 {
+    color: #1b5e20;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-item {
+    text-decoration: none;
+    background: linear-gradient(145deg, #2e7d32, #1b5e20);
+    color: white;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+    width: fit-content;
+}
+
+.contact-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 600px) {
+    .contact-item {
+        width: 90%;
+        justify-content: center;
+        font-size: 16px;
+    }
+}
